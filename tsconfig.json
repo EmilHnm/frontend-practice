@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "AMD",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "strict": true,
+    "noImplicitThis": true,
+    "outDir": "./assets/js",
+    "outFile": "./assets/js/app.js",
+    "sourceRoot": "./src/ts/",
+    "sourceMap": true
+  }
+}

@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <nav class="header__nav">
-        <div class="toggle">
+        <div class="toggle" id="open-menu">
           <img src="./assets//image/icon-menu.svg" alt="" />
         </div>
         <div class="navigation">
@@ -98,9 +98,9 @@
         </div>
       </div>
     </header>
-    <header class="res-header" id="res-header">
+    <div class="res-header" id="menu">
       <div class="res-header__top">
-        <div class="res-header__top--hide">
+        <div class="res-header__top--hide" id="close-menu">
           <img src="./assets/image/icon-close.svg" alt="" />
         </div>
         <div class="res-header__top--logo">
@@ -176,6 +176,54 @@
           <button class="register black-gray">Đăng kí</button>
         </div>
       </div>
-    </header>
+    </div>
+    <main>
+      <div class="banner">
+        <div class="banner__slider" id="banner-slider">
+          <div class="banner__item">
+            <div class="banner__item--image">
+              <img src="./assets/image/banner.png" alt="" />
+            </div>
+            <div class="banner__item--content">
+              <h1>ReviewNhà</h1>
+              <h2>Finding your best home</h2>
+            </div>
+          </div>
+          <div class="banner__item">
+            <div class="banner__item--image">
+              <img src="./assets/image/banner.png" alt="" />
+            </div>
+            <div class="banner__item--content">
+              <h1>ReviewNhà</h1>
+              <h2>Finding your best home 1</h2>
+            </div>
+          </div>
+          <div class="banner__item">
+            <div class="banner__item--image">
+              <img src="./assets/image/banner.png" alt="" />
+            </div>
+            <div class="banner__item--content">
+              <h1>ReviewNhà</h1>
+              <h2>Finding your best home 2</h2>
+            </div>
+          </div>
+        </div>
+        <div class="banner__control">
+          <div class="dot active" onclick="changeBanner(0)"></div>
+          <div class="dot" onclick="changeBanner(1)"></div>
+          <div class="dot" onclick="changeBanner(2)"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="container__control">
+          <button class="green">Tất cả</button>
+          <button>Xã hội</button>
+          <button>Nhà đất</button>
+          <button>Đời sống</button>
+          <button>Video</button>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

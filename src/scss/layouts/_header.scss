@@ -101,14 +101,23 @@
 @media screen and (max-width: $screen-viewport) {
   .header {
     &__nav {
+      flex: 0 0 auto;
       & .toggle {
         display: block;
+        margin-right: 24px;
       }
       & .navigation {
         display: none;
       }
     }
+    &__logo {
+      width: 100%;
+    }
     &__right {
+      flex: 0 0 auto;
+      &--upload {
+        display: none;
+      }
     }
   }
 }
@@ -123,12 +132,16 @@
   display: none;
   flex-direction: column;
   z-index: 100;
+  &.open {
+    display: flex;
+  }
   &__top {
     display: flex;
     align-items: center;
     width: calc(100% - 26px);
     height: 75px;
     margin-left: 26px;
+    flex: 0 0 auto;
     &--hide {
       margin-right: 32px;
       width: 24px;
@@ -179,6 +192,7 @@
     align-items: center;
     flex-wrap: wrap;
     row-gap: 36px;
+    flex: 0 0 auto;
     button {
       padding: 12px;
     }

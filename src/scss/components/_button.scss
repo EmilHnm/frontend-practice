@@ -12,6 +12,10 @@ button {
     background-color: $red;
     color: $white;
   }
+  &.green {
+    background-color: $green;
+    color: $white;
+  }
   &.black-gray {
     background-color: $gray-900;
     color: $white;

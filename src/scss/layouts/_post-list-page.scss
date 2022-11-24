@@ -1,0 +1,70 @@
+main {
+  width: 100%;
+  background: $white;
+  .banner {
+    width: 73%;
+    height: 390px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    &__slider {
+      height: 100%;
+      width: max-content;
+      display: flex;
+      justify-content: flex-start;
+      transition: all 0.3s;
+    }
+    &__item {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &--image {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &--content {
+        position: absolute;
+        top: 50%;
+        left: 125px;
+        transform: translate(0, -50%);
+        color: $white;
+        font-family: "MuseoModerno";
+        h1 {
+          font-size: 48px;
+        }
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__control {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      gap: 16px;
+      .dot {
+        width: 16px;
+        height: 16px;
+        z-index: 1;
+        background-color: $white;
+        opacity: 0.5;
+        border-radius: 50%;
+        cursor: pointer;
+        &.active {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  .container {
+    width: 60%;
+    margin: auto;
+  }
+}

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap");
 html,
 body,
 div,
@@ -129,6 +130,10 @@ button.red {
   background-color: #dc3545;
   color: #fff;
 }
+button.green {
+  background-color: #198754;
+  color: #fff;
+}
 button.black-gray {
   background-color: #212529;
   color: #fff;
@@ -235,10 +240,23 @@ button.black-gray {
 }
 
 @media screen and (max-width: 1024px) {
+  .header__nav {
+    flex: 0 0 auto;
+  }
   .header__nav .toggle {
     display: block;
+    margin-right: 24px;
   }
   .header__nav .navigation {
+    display: none;
+  }
+  .header__logo {
+    width: 100%;
+  }
+  .header__right {
+    flex: 0 0 auto;
+  }
+  .header__right--upload {
     display: none;
   }
 }
@@ -254,12 +272,16 @@ button.black-gray {
   flex-direction: column;
   z-index: 100;
 }
+.res-header.open {
+  display: flex;
+}
 .res-header__top {
   display: flex;
   align-items: center;
   width: calc(100% - 26px);
   height: 75px;
   margin-left: 26px;
+  flex: 0 0 auto;
 }
 .res-header__top--hide {
   margin-right: 32px;
@@ -310,6 +332,7 @@ button.black-gray {
   align-items: center;
   flex-wrap: wrap;
   row-gap: 36px;
+  flex: 0 0 auto;
 }
 .res-header__control button {
   padding: 12px;
@@ -363,6 +386,76 @@ button.black-gray {
   .res-header__control .auth {
     width: 90%;
   }
+}
+main {
+  width: 100%;
+  background: #fff;
+}
+main .banner {
+  width: 73%;
+  height: 390px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+main .banner__slider {
+  height: 100%;
+  width: max-content;
+  display: flex;
+  justify-content: flex-start;
+  transition: all 0.3s;
+}
+main .banner__item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+main .banner__item--image {
+  width: 100%;
+  height: 100%;
+}
+main .banner__item--image img {
+  width: 100%;
+  height: 100%;
+}
+main .banner__item--content {
+  position: absolute;
+  top: 50%;
+  left: 125px;
+  transform: translate(0, -50%);
+  color: #fff;
+  font-family: "MuseoModerno";
+}
+main .banner__item--content h1 {
+  font-size: 48px;
+}
+main .banner__item--content h2 {
+  font-size: 28px;
+}
+main .banner__control {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  gap: 16px;
+}
+main .banner__control .dot {
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+  background-color: #fff;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main .banner__control .dot.active {
+  opacity: 0.9;
+}
+main .container {
+  width: 60%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
