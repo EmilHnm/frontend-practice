@@ -1,0 +1,19 @@
+button {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 6px 36px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  &.red {
+    background-color: $red;
+    color: $white;
+  }
+  &.black-gray {
+    background-color: $gray-900;
+    color: $white;
+  }
+}
