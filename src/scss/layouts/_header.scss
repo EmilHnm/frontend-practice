@@ -1,0 +1,239 @@
+.header {
+  width: 95%;
+  position: relative;
+  margin: auto;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(30px);
+  overflow: hidden;
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    & .toggle {
+      display: none;
+    }
+    & .navigation {
+      display: flex;
+      gap: 48px;
+      a {
+        color: $gray-500;
+        font-size: 1.2rem;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 8px;
+        &.active {
+          color: $gray-700;
+          border-bottom: 2px solid $red;
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    &__alert {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      &--notification {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        background: url("../image/icon-bell.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      &--like {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        background: url("../image/icon-heart.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      & .new {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 10px;
+          height: 10px;
+          background-color: $red;
+          border-radius: 50%;
+          border: 1px solid $white;
+        }
+      }
+    }
+    &--user {
+      display: flex;
+      gap: 10px;
+      user-select: none;
+      cursor: pointer;
+      .user__details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        &--name {
+          font-size: 14px;
+          font-weight: 600;
+        }
+        &--position {
+          font-size: 12px;
+          font-weight: 300;
+          color: $gray-500;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-viewport) {
+  .header {
+    &__nav {
+      & .toggle {
+        display: block;
+      }
+      & .navigation {
+        display: none;
+      }
+    }
+    &__right {
+    }
+  }
+}
+.res-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+  &__top {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 26px);
+    height: 75px;
+    margin-left: 26px;
+    &--hide {
+      margin-right: 32px;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+      cursor: pointer;
+      & img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+    }
+    &--logo {
+      height: 24px;
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    margin-left: 26px;
+    height: 100%;
+    padding-top: 100px;
+    a {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 48px;
+      color: $gray-500;
+      &.active {
+        color: $red;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 26px;
+          background-color: $red;
+          height: 4px;
+          width: calc(100% - 465px);
+        }
+      }
+    }
+  }
+  &__control {
+    margin-bottom: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 36px;
+    button {
+      padding: 12px;
+    }
+    & .upload {
+      width: 60%;
+    }
+    & .auth {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      & .login {
+        width: 40%;
+      }
+      & .register {
+        width: 40%;
+      }
+    }
+  }
+}
+@media screen and (max-width: $mobile-viewport) {
+  .res-header {
+    &__top {
+      align-items: flex-end;
+      min-height: 70px;
+      &--logo {
+        height: 15px;
+        svg {
+          height: 100%;
+        }
+      }
+    }
+    &__nav {
+      a {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 26px;
+          background-color: $red;
+          height: 4px;
+          width: 76px;
+        }
+      }
+    }
+    &__control {
+      row-gap: 12px;
+      & .upload {
+        width: 90%;
+      }
+      & .auth {
+        width: 90%;
+      }
+    }
+  }
+}
