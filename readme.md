@@ -9,4 +9,4 @@
 
 ## Demo
 
-- Link to demo:
+- Link to demo: https://github.com/EmilRailgun/frontend-practice/blob/ab891ebf69218961f2984ac415c3a0504b95fa7d/demo/demo.mp4
