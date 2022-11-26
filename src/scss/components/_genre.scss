@@ -1,0 +1,19 @@
+a.genre {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 6px 36px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  &:visited {
+    color: $black;
+  }
+  &.active {
+    background-color: $green;
+    color: $white;
+  }
+}

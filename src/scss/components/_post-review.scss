@@ -1,0 +1,62 @@
+.post {
+  width: 100%;
+  height: max-content;
+  &__image {
+    width: 100%;
+    border-radius: 35px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    position: relative;
+    .cover {
+      width: 100%;
+    }
+    .save-post {
+      position: absolute;
+      top: 26px;
+      right: 26px;
+      z-index: 1;
+      cursor: pointer;
+      filter: brightness(0) invert(1);
+    }
+  }
+  &__title {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  &__details {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 9px 0;
+
+    &--genre {
+      color: $green;
+    }
+    &--uploader {
+      color: $gray-700;
+    }
+    &--date {
+      color: $gray-500;
+    }
+  }
+  &__sumary {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $gray-500;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}

@@ -6,7 +6,11 @@ button {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
+  font-size: 14px;
   background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   &.red {
     background-color: $red;
@@ -16,8 +20,26 @@ button {
     background-color: $green;
     color: $white;
   }
+  &.blue {
+    background-color: $blue;
+    color: $white;
+  }
+  &.white {
+    background-color: $white;
+    color: $black;
+    border: 1px solid $black;
+  }
   &.black-gray {
     background-color: $gray-900;
     color: $white;
+  }
+  &.light-gray {
+    background-color: $gray-600;
+    color: $white;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
   }
 }
