@@ -2,62 +2,62 @@
 const bannerSlider = document.querySelector("#banner-slider");
 const bannerControl = [].slice.call(document.querySelectorAll(".dot"));
 function changeBanner(index) {
-    if (bannerSlider)
-        bannerSlider.style.transform = `translateX(-${index * 33.33}%)`;
-    if (bannerControl) {
-        bannerControl.forEach((element) => {
-            element.className = element.className.replace("active", "");
-        });
-        bannerControl[index].className += " active";
-    }
+  if (bannerSlider)
+    bannerSlider.style.transform = `translateX(-${index * 33.33}%)`;
+  if (bannerControl) {
+    bannerControl.forEach((element) => {
+      element.className = element.className.replace("active", "");
+    });
+    bannerControl[index].className += " active";
+  }
 }
 const vHighlight = document.querySelector("#video-highlight");
 const vMore = document.querySelector("#video-more");
 const videoData = [
-    {
-        id: 1,
-        img: "1",
-    },
-    {
-        id: 2,
-        img: "2",
-    },
-    {
-        id: 3,
-        img: "3",
-    },
-    {
-        id: 4,
-        img: "1",
-    },
-    {
-        id: 5,
-        img: "2",
-    },
-    {
-        id: 6,
-        img: "3",
-    },
-    {
-        id: 7,
-        img: "1",
-    },
-    {
-        id: 8,
-        img: "2",
-    },
-    {
-        id: 9,
-        img: "3",
-    },
-    {
-        id: 10,
-        img: "1",
-    },
+  {
+    id: 1,
+    img: "1",
+  },
+  {
+    id: 2,
+    img: "2",
+  },
+  {
+    id: 3,
+    img: "3",
+  },
+  {
+    id: 4,
+    img: "1",
+  },
+  {
+    id: 5,
+    img: "2",
+  },
+  {
+    id: 6,
+    img: "3",
+  },
+  {
+    id: 7,
+    img: "1",
+  },
+  {
+    id: 8,
+    img: "2",
+  },
+  {
+    id: 9,
+    img: "3",
+  },
+  {
+    id: 10,
+    img: "1",
+  },
 ];
 window.addEventListener("load", () => {
-    if (vHighlight)
-        vHighlight.innerHTML = `
+  if (vHighlight)
+    vHighlight.innerHTML = `
              <div class="video">
                 <div class="video__main">
                   <img src="./assets/image/video-img-${videoData[0].img}.png" alt="" />
@@ -86,9 +86,9 @@ window.addEventListener("load", () => {
                   </div>
                 </div>
               </div>`;
-    if (vMore) {
-        const more = videoData.map((item) => {
-            return `<div class="video">
+  if (vMore) {
+    const more = videoData.map((item) => {
+      return `<div class="video">
                 <div class="video__main">
                   <img src="./assets/image/video-img-${item.img}.png" alt="" />
                   <span class="playBtn" onclick="setPlayVideo(${item.id})">
@@ -116,18 +116,17 @@ window.addEventListener("load", () => {
                   </div>
                 </div>
               </div>`;
-        });
-        vMore.innerHTML = more.join("");
-    }
+    });
+    vMore.innerHTML = more.join("");
+  }
 });
 const setPlayVideo = (id) => {
-    const video = videoData.find((item) => item.id === id);
-    if (!video) {
-        return;
-    }
-    if (!vHighlight)
-        return;
-    vHighlight.innerHTML = `
+  const video = videoData.find((item) => item.id === id);
+  if (!video) {
+    return;
+  }
+  if (!vHighlight) return;
+  vHighlight.innerHTML = `
              <div class="video">
                 <div class="video__main">
                   <img src="./assets/image/video-img-${video.img}.png" alt="" />
@@ -162,14 +161,15 @@ const closeMenu = document.querySelector("#close-menu");
 const menu = document.querySelector("#menu");
 const main = document.querySelector("main");
 openMenu.addEventListener("click", () => {
-    menu.classList.add("open");
-    main.style.display = "none";
+  menu.classList.add("open");
+  main.style.display = "none";
 });
 closeMenu.addEventListener("click", () => {
-    menu.classList.remove("open");
-    main.style.display = "block";
+  menu.classList.remove("open");
+  main.style.display = "block";
 });
 window.addEventListener("resize", () => {
-    menu.classList.remove("open");
+  menu.classList.remove("open");
+  main.style.display = "block";
 });
 //# sourceMappingURL=app.js.map

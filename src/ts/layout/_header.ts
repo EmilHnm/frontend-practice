@@ -14,4 +14,5 @@ closeMenu.addEventListener("click", () => {
 
 window.addEventListener("resize", () => {
   menu.classList.remove("open");
+  main.style.display = "block";
 });
