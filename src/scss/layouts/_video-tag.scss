@@ -203,3 +203,11 @@
     }
   }
 }
+
+@media screen and (max-width: $mobile-viewport) {
+  .container__all {
+    .video {
+      width: 100%;
+    }
+  }
+}

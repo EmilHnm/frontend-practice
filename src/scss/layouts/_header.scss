@@ -272,15 +272,17 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 27px;
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 26px;
-          background-color: $red;
-          height: 4px;
-          width: 76px;
+        &.active {
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 26px;
+            background-color: $red;
+            height: 4px;
+            width: 76px;
+          }
         }
       }
     }

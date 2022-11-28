@@ -654,7 +654,7 @@ a.genre.active {
     font-size: 24px;
     line-height: 27px;
   }
-  .res-header__nav a::after {
+  .res-header__nav a.active::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -1140,6 +1140,11 @@ aside .popular__top--view-all .icon {
   user-select: none;
 }
 
+@media screen and (max-width: 375px) {
+  .container__all .video {
+    width: 100%;
+  }
+}
 main {
   width: 100%;
   background: #fff;
