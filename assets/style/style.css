@@ -113,6 +113,7 @@ table {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 button {
@@ -357,7 +358,7 @@ a.genre.active {
     width: 42%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 490px) {
   .post-item {
     height: auto;
     margin: 24px 0;
@@ -525,7 +526,7 @@ a.genre.active {
     display: none;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 490px) {
   .header__logo {
     max-height: 83px;
   }
@@ -638,7 +639,7 @@ a.genre.active {
   width: 40%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 490px) {
   .res-header__top {
     align-items: flex-end;
     min-height: 70px;
@@ -712,6 +713,7 @@ a.genre.active {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  flex-wrap: wrap;
 }
 .post-container .control__metadata {
   display: flex;
@@ -842,6 +844,8 @@ aside .same-genre__top--view-all {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
+  width: max-content;
+  flex: 0 0 auto;
 }
 aside .same-genre__top--view-all .icon {
   display: none;
@@ -876,6 +880,8 @@ aside .popular__top--view-all {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
+  width: max-content;
+  flex: 0 0 auto;
 }
 aside .popular__top--view-all .icon {
   display: none;
@@ -898,7 +904,7 @@ aside .popular__top--view-all .icon {
     display: none;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 490px) {
   .post-container .top {
     margin-top: 26px;
   }
@@ -915,6 +921,13 @@ aside .popular__top--view-all .icon {
   .post-container .control__social button {
     width: 33% !important;
     flex: 0 0 auto;
+  }
+  .post-container .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 27px;
   }
   .post-container .content {
     padding: 0;
@@ -1140,7 +1153,7 @@ aside .popular__top--view-all .icon {
   user-select: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 490px) {
   .container__all .video {
     width: 100%;
   }
@@ -1554,7 +1567,7 @@ main .container__postList__more {
     overflow: hidden;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 490px) {
   main .banner {
     height: 91px;
   }
